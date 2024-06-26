@@ -7,6 +7,7 @@ import propertyImageSix from "@/assets/images/property-img-6.png";
 import playerLogo from "@/assets/icons/video-player.png";
 import { Button } from "./ui/button";
 import { IoSearch } from "react-icons/io5";
+import { cn } from "@/lib/utils";
 
 const PropertyListings = () => {
   const data = [
@@ -38,29 +39,52 @@ const PropertyListings = () => {
 
   return (
     <section className="section-wrapper space-y-10">
-      {data?.map((item) => (
+      {data?.map((item, index) => (
         <div
           key={item?.id}
-          className="flex max-md:flex-col items-center justify-between gap-20 relative py-20"
+          className={cn(
+            "flex max-md:flex-col items-center justify-between gap-20 relative py-20",
+            index % 2 !== 0 && "flex-row-reverse"
+          )}
         >
           {/* left side */}
           <div className="flex-1 relative">
-            <img
-              src={item.images[0]}
-              alt={item.title}
-              className="h-[350px] w-[500px] object-cover rounded-md"
-            />
+            {index % 2 === 0 ? (
+              <>
+                <img
+                  src={item.images[0]}
+                  alt={item.title}
+                  className="absolute -bottom-20 -right-6 h-[250px] w-[450px] object-cover rounded-md"
+                />
+
+                <img
+                  src={item.images[1]}
+                  alt={item.title}
+                  className="h-[350px] w-[500px] object-cover rounded-md"
+                />
+              </>
+            ) : (
+              <>
+                <img
+                  src={item.images[0]}
+                  alt={item.title}
+                  className="h-[350px] w-[500px] object-cover rounded-md"
+                />
+                <img
+                  src={item.images[1]}
+                  alt={item.title}
+                  className="absolute -top-20 -right-6 h-[250px] w-[450px] object-cover rounded-md"
+                />
+              </>
+            )}
 
             <img
               src={playerLogo}
               alt="Video Player Logo"
-              className="absolute top-[46%] right-5 -translate-x-1/2 size-10 z-10"
-            />
-
-            <img
-              src={item.images[1]}
-              alt={item.title}
-              className="absolute -bottom-20 -right-6 h-[250px] w-[450px] object-cover rounded-md"
+              className={cn(
+                "absolute right-5 -translate-x-1/2 size-10 z-10",
+                index % 2 === 0 ? "top-[46%]" : "top-[43%]"
+              )}
             />
           </div>
 
