@@ -1,10 +1,10 @@
-import Hero from "@/components/Hero";
+import PropertyBanner from "@/components/PropertyBanner";
 import PropertyListings from "@/components/PropertyListings";
 
 const Home = () => {
   return (
     <main>
-      <Hero />
+      <PropertyBanner />
       <PropertyListings />
     </main>
   );

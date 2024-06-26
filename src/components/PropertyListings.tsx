@@ -38,7 +38,7 @@ const PropertyListings = () => {
   ];
 
   return (
-    <section className="section-wrapper space-y-10">
+    <section className="section-wrapper space-y-10 mb-20">
       {data?.map((item, index) => (
         <div
           key={item?.id}
@@ -49,34 +49,19 @@ const PropertyListings = () => {
         >
           {/* left side */}
           <div className="flex-1 relative">
-            {index % 2 === 0 ? (
-              <>
-                <img
-                  src={item.images[0]}
-                  alt={item.title}
-                  className="absolute -bottom-20 -right-6 h-[250px] w-[450px] object-cover rounded-md"
-                />
-
-                <img
-                  src={item.images[1]}
-                  alt={item.title}
-                  className="h-[350px] w-[500px] object-cover rounded-md"
-                />
-              </>
-            ) : (
-              <>
-                <img
-                  src={item.images[0]}
-                  alt={item.title}
-                  className="h-[350px] w-[500px] object-cover rounded-md"
-                />
-                <img
-                  src={item.images[1]}
-                  alt={item.title}
-                  className="absolute -top-20 -right-6 h-[250px] w-[450px] object-cover rounded-md"
-                />
-              </>
-            )}
+            <img
+              src={item?.images[0]}
+              alt={item?.title}
+              className="h-[350px] w-[500px] object-cover rounded-md"
+            />
+            <img
+              src={item?.images[1]}
+              alt={item?.title}
+              className={cn(
+                "absolute -right-6 h-[250px] w-[450px] object-cover rounded-md",
+                index % 2 === 0 ? "-bottom-20" : "-top-20"
+              )}
+            />
 
             <img
               src={playerLogo}
