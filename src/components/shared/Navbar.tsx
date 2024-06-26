@@ -19,9 +19,7 @@ const Navbar = () => {
       </div>
 
       <div className="max-md:flex-1 flex items-end justify-end">
-        <Button size="sm" className="bg-blue-200 text-blue-500">
-          Signin
-        </Button>
+        <Button size="sm">Signin</Button>
       </div>
     </nav>
   );

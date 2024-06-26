@@ -5,6 +5,8 @@ import propertyImageFour from "@/assets/images/property-img-4.png";
 import propertyImageFive from "@/assets/images/property-img-5.png";
 import propertyImageSix from "@/assets/images/property-img-6.png";
 import playerLogo from "@/assets/icons/video-player.png";
+import { Button } from "./ui/button";
+import { IoSearch } from "react-icons/io5";
 
 const PropertyListings = () => {
   const data = [
@@ -71,6 +73,10 @@ const PropertyListings = () => {
 
             <h2>{item?.subTitle}</h2>
             <p className="text-justify">{item?.description}</p>
+
+            <Button className="flex items-center gap-2.5">
+              <IoSearch /> Find Property
+            </Button>
           </div>
         </div>
       ))}
