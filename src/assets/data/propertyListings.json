@@ -4,20 +4,14 @@
     "title": "Modern Family Homes",
     "subTitle": "Spacious and Comfortable Living",
     "description": "Discover modern family homes designed for comfort and convenience. These homes offer spacious living areas, contemporary kitchens, and plenty of outdoor space for your family to enjoy.",
-    "images": [
-      "../src/assets/images/property-img-1.png",
-      "../src/assets/images/property-img-2.png"
-    ]
+    "images": ["../images/property-img-1.png", "../images/property-img-2.png"]
   },
   {
     "id": 2,
     "title": "Luxury Apartments",
     "subTitle": "Elegant and High-End Living",
     "description": "Experience the height of luxury in our premium apartments. These residences feature top-of-the-line amenities, breathtaking views, and impeccable design details to ensure a sophisticated lifestyle.",
-    "images": [
-      "../src/assets/images/property-img-3.png",
-      "../src/assets/images/property-img-4.png"
-    ]
+    "images": ["../images/property-img-3.png", "../images/property-img-4.png"]
   },
   {
     "id": 3,
@@ -25,9 +19,6 @@
     "subTitle": "Charming and Quaint Getaways",
     "description": "Escape to a cozy cottage, perfect for a peaceful retreat. These charming homes are nestled in scenic locations and offer a warm and inviting atmosphere, ideal for relaxation and rejuvenation.",
 
-    "images": [
-      "../src/assets/images/property-img-5.png",
-      "../src/assets/images/property-img-6.png"
-    ]
+    "images": ["../images/property-img-5.png", "../images/property-img-6.png"]
   }
 ]
